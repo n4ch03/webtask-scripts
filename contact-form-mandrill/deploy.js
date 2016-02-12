@@ -10,6 +10,7 @@ fs.readFile('index.js', function (err, code) {
   }
 
   profile.create(code.toString(), {
+    name: 'contact-from-mandril',
     secrets: config.secrets
   }, function (error, webtask) {
     if (error) {
